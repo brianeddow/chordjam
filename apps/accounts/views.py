@@ -37,11 +37,13 @@ class Register(View):
 			last_name = form.cleaned_data['last_name']
 			email = form.cleaned_data['email']
 			password = form.cleaned_data['password2']
-
-			User.objects.create(username=username,first_name=first_name,last_name=last_name,email=email,password=password)
-
 			form.save()
-			return redirect('/accounts/success')
+			user = authenticate(username=username, password=password)
+			if user is not None:
+				login(request, user)
+				return redirect('/accounts/success/')
+			else:
+				redirect('/accounts/')
 		else:
 			context = {'form': form}
 			return render(request, 'accounts/register.html', context)
@@ -68,7 +70,7 @@ class Login(View):
 				login(request, user)
 				return redirect('/accounts/success/')
 			else:
-				return render(request, 'accounts/login.html', context)
+				return redirect('/accounts/login/')
 		else:
 			return render(request, 'accounts/login.html', context)
 

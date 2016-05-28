@@ -192,4 +192,8 @@ def reviews(request):
 	return render(request, 'home/reviews.html', context)
 
 def discovery(request):
-	return render(request, 'home/discovery.html')
+	chords = ['A','B','C','D','E','F','G']
+	context = {
+		'chords': chords
+	}
+	return render(request, 'home/discovery.html', context)

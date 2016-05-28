@@ -45,30 +45,16 @@
             </tr>
         </thead>
         <tbody>
+            {% for i in chords %}
             <tr>
                 <td class="top">
-                    <h1>C Major:</h1>
+                    <h1>{{ i }}</h1>
                 </td>
                 <td>
-                    <img src="{% static 'home/c.jpg' %}" class="disc">
+                    <img src="/static/home/{{ i }}.png" class="disc">
                 </td>
             </tr>
-            <tr>
-                <td class="top">
-                    <h1>G Major:</h1>
-                </td>
-                <td>
-                    <img src="{% static 'home/g.jpg' %}" class="disc">
-                </td>
-            </tr>
-            <tr>
-                <td class="top">
-                    <h1>D Minor:</h1>
-                </td>
-                <td>
-                    <img src="{% static 'home/d.jpg' %}" class="disc">
-                </td>
-            </tr>
+            {% endfor %}
         </tbody>
     </table>
     </div>
