@@ -25,7 +25,7 @@ SECRET_KEY = 'crwsltt!!4-sp014_kyz4=j^c@*zir1z@io!^e4lb__s#7f^0a'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['chordjamdjangopython.herokuapp.com']
 
 
 # Application definition
@@ -123,3 +123,6 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/1.9/howto/static-files/
 
 STATIC_URL = '/static/'
+# added for heroku
+STATICFILES_STORAGE = 'whitenoise.django.GzipManifestStaticFilesStorage'
+STATIC_ROOT = os.path.join((BASE_DIR), 'static')
