@@ -80,7 +80,7 @@ WSGI_APPLICATION = 'first_project.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.postgresql_psycopg2',
+        'ENGINE': 'django.db.backends.sqlite3',
         'NAME': 'd548ab22fsv8ga',
         'USER': 'olvaarbvqflniq',
         'PASSWORD': 'tPw59yfdktekDLk6vZwad8-Ez-',
