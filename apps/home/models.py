@@ -7,7 +7,7 @@ class Review(models.Model):
 	review = models.CharField(max_length=500, null=False)
 	rating = models.IntegerField(null=False)
 	suggestions = models.TextField(null=False)
-	created_at = models.DateTimeField('Created At', default=timezone.now())
+	created_at = models.DateTimeField('Created At', default=datetime.now())
 
 	def __str__(self):
 		return self.name
