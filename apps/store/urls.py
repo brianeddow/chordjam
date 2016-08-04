@@ -2,7 +2,7 @@ from django.conf.urls import patterns, url
 from . import views
 
 urlpatterns = patterns('',
-	url(r'^$', views.index, name='index'),
+	url(r'^/', views.index, name='index'),
 	url(r'^products/$', views.products, name='products'),
 	url(r'^new_product/$', views.new_product, name='new_product'),
 	url(r'^add_product/$', views.add_product, name='add_product'),
