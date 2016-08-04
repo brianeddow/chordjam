@@ -1,4 +1,5 @@
 from django.db import models
+from django.utils import timezone
 from datetime import datetime
 
 class Review(models.Model):
@@ -6,7 +7,7 @@ class Review(models.Model):
 	review = models.CharField(max_length=500, null=False)
 	rating = models.IntegerField(null=False)
 	suggestions = models.TextField(null=False)
-	created_at = models.DateTimeField('Created At', default=datetime.now())
+	created_at = models.DateTimeField('Created At', default=timezone.localtime(timezone.now()))
 
 	def __str__(self):
 		return self.name
