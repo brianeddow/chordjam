@@ -1,1 +1,1 @@
-web: gunicorn chordjam.wsgi --log-file -
+web: gunicorn first_project.wsgi --log-file -
