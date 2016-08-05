@@ -16,7 +16,7 @@ Including another URLconf
 from django.conf.urls import patterns, include, url
 from django.contrib import admin
 urlpatterns = patterns('',
-    url(r'^/', include('apps.home.urls')),
+    url(r'^$', include('apps.home.urls')),
     url(r'^quiz/', include('apps.quiz.urls')),
     url(r'^store/', include('apps.store.urls')),
     url(r'^accounts/', include('apps.accounts.urls')),
