@@ -25,10 +25,7 @@ SECRET_KEY = 'crwsltt!!4-sp014_kyz4=j^c@*zir1z@io!^e4lb__s#7f^0a'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
-ALLOWED_HOSTS = ['chordjam.herokuapp.com']
-
-ADMINS = (('Brian', 'brian.eddow@gmail.com'),)
-
+ALLOWED_HOSTS = ['www.chordjam.herokuapp.com']
 
 # Application definition
 
