@@ -159,5 +159,5 @@ USE_TZ = True
 
 STATIC_URL = '/static/'
 # added for heroku
-STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage' # was whitenoise.django.GzipManifestStaticFilesStorage
+STATICFILES_STORAGE = 'was whitenoise.django.GzipManifestStaticFilesStorage'
 STATIC_ROOT = os.path.join((BASE_DIR), 'static')
