@@ -20,7 +20,7 @@ from django.conf.urls import patterns, include, url
 from django.contrib import admin
 
 urlpatterns = patterns('',
-    url(r'^', include('apps.home.urls')),
+    url(r'^/$', include('apps.home.urls')),
     url(r'^favicon.ico$', RedirectView.as_view(url=staticfiles_storage.url('favicon.ico'), permanent=False), name='favicon'),
     url(r'^quiz/', include('apps.quiz.urls')),
     url(r'^store/', include('apps.store.urls')),
