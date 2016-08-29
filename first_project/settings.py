@@ -59,7 +59,7 @@ ROOT_URLCONF = 'first_project.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        'DIRS': [os.path.join(BASE_DIR, 'templates')],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -143,7 +143,6 @@ LOGGING = {
 
 import logging.config
 logging.config.dictConfig(LOGGING)
-
 
 # Internationalization
 # https://docs.djangoproject.com/en/1.9/topics/i18n/
