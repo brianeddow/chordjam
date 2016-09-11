@@ -4,6 +4,8 @@ from .forms import ReviewForm
 from django.utils import timezone
 from .models import Review
 from django.views.generic import View
+import logging
+log = logging.getLogger(__name__)
 
 def index(request):
 	# return HttpResponse("You are looking at question number %s." % question_id)
@@ -27,7 +29,9 @@ def index(request):
 			]
 		}
 
-	return render(request, 'index.html', context)
+	log.debug("here's the logger")
+
+	return render(request, 'home/index.html', context)
 
 def show(request, chord_id):
 
