@@ -27,6 +27,8 @@ DEBUG = False
 
 ALLOWED_HOSTS = ['.chordjam.herokuapp.com']
 
+ADMINS = [('Brian', 'brian.eddow@gmail.com')]
+
 # Application definition
 
 INSTALLED_APPS = [
